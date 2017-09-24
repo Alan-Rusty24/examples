@@ -4,6 +4,8 @@
 
 import os, sys
 
+# This version is modified and tested to that compilation
+# works on linux-distribution (Ubunutu 16.04)
 # This has been tested using SCons v2.5.1, gfortran v6.3,
 # using MacOS Sierra (10.12) with compilers and libraries installed through MacPorts.
 # It may not work on your system. It is possible that you can get it to work by
@@ -27,11 +29,11 @@ import os, sys
 # Assume that gfortran will be used as the default compiler
 # NB by default we do not invoke any optimization
 MY_FLAGS='-fdefault-real-8 -fall-intrinsics -std=f2008 -Wall'
-LAPACK_LIBPATH='/opt/local/lib/lapack'
+LAPACK_LIBPATH='/usr/lib'
 LAPACK_LIBS='lapack'
-FFTW_LIBPATH='/opt/local/lib'
+FFTW_LIBPATH='/usr/lib/x86-64-linux-gnu/lib'
 FFTW_LIBS='fftw3'
-FFTW_INCLUDE='/opt/local/include'
+FFTW_INCLUDE='/usr/include'
 OMP_FLAGS='-fopenmp'
 OMP_LINKFLAGS='-fopenmp'
 
